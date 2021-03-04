@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for i in response %}
+    <br>
+    {{'i["show"]["ID"]' }}
+    <br>
+    {{ "i['show']['Title']" }}
+    <br>
+    {{ "i['show']['Contributors']" }}
+    <br>
+    {{ "i['show']['ISWC']" }}
+    <br>
+    {{ "i['show']['Source']" }}
+    <br>
+    song={{"i['show']['Song']" }}
+    <br>
+        <audio controls>
+            <source src="{{i}}" type="audio/ogg">
+          Your browser does not support the audio element.
+        </audio>  
+    {% endfor %}  
+</body>
+</html>
